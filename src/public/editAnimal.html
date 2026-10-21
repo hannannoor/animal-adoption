@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Edit Animal</title>
+  <link rel="stylesheet" href="/css/animal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ADMIN HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="site">
+          <div class="icon">♥</div>
+          <div>
+            <div class="site-title">
+              Animal Adoption
+              <span class="admin-pill">ADMIN</span>
+            </div>
+            <div class="site-subtitle">Admin Dashboard</div>
+          </div>
+        </div>
+
+            <nav class="header-actions">
+              <a class="btn btn-public" href="animal.html"><i class="fa-solid fa-globe"></i>Public Website</a>
+              <a class="btn btn-manage-apps" href="manageApplications.html">
+                  <i class="fa-regular fa-clipboard"></i>Manage Applications <span id="pendingCount" class="pending-badge"></span></a>
+              <a class="btn btn-post" href="addAnimal.html?isadmin=true"><i class="fa fa-plus-circle" aria-hidden="true"></i>Post an Animal</a>
+            </nav>
+              
+
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form-title-block">
+        <a class="back-link" href="admin.html">← Back to Admin</a>
+        <h1>Edit Animal</h1>
+        <p>Update the animal information below</p>
+      </div>
+
+      <form id="editAnimalForm" class="form-card">
+
+        <h2 class="form-card-title">Animal Information</h2>
+
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter animal's name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Age</label>
+          <div class="form-row-2">
+            <input id="age_year" type="number" name="age_year" min="0" placeholder="Years" required>
+            <input id="age_month" type="number" min="0" name="age_month" max="11" placeholder="Months" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="species">Species</label>
+            <select id="species_id" name="species_id" required>
+              <option value="">Select species</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+          <label for="breed">Breed</label>
+          <input id="breed" type="text" name="breed" placeholder="Enter breed" required>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" required>
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="temperament">Temperament</label>
+          <input id="temperament"  name="temperament" type="text" placeholder="e.g. Calm, Fiesty, Playful, Gentle" required>
+        </div>
+
+        <div class="form-group">
+          <label for="adoption_status">Adoption Status</label>
+          <select id="adoption_status"  name="adoption_status" required>
+            <option value="">Select status</option>
+            <option value="available">Available</option>
+            <option value="reserved">Reserved</option>
+            <option value="adopted">Adopted</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="defaultImageUrl">Default Image URL</label>
+          <input id="defaultImageUrl" name="image_url" type="url" placeholder="https://example.com/image.jpg" required>
+          <div id="defaultImagePreview" class="image-preview-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Additional Image URLs</label>
+          <div id="extraImagesBox" class="extra-images-box"></div>
+          <button type="button" id="btnAddMoreImage" class="btn btn-addmore">
+            + Add More
+          </button>
+        </div>
+
+        <button type="button" class="btn btn-submit-animal" onclick="updateAnimalData()">Update Animal</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/javascript/shared.js"></script>
+  <script src="/javascript/editAnimal.js"></script>
+</body>
+</html>

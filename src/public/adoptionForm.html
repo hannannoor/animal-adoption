@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Adoption Application</title>
+  <link rel="stylesheet" href="/css/animal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="header">
+      <div class="header-inner">
+        <div class="site">
+          <div class="icon">❤</div>
+          <div>
+            <div class="site-title">Animal Adoption</div>
+            <div class="site-subtitle">Find your new companion</div>
+          </div>
+        </div>
+
+            <nav class="header-actions">
+              <a class="btn btn-portal" href="admin.html"><i class="fa fa-cog"></i>Admin Portal</a>
+              <a class="btn btn-post" href="addAnimal.html"><i class="fa fa-plus-circle" aria-hidden="true"></i>Post an Animal</a>
+            </nav>
+        
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="form-title-block">
+        <a class="back-link" href="animal.html">← Back to Home</a>
+        <h1>Adoption Application</h1>
+        <p id="animalNameSubtitle">Complete the form below to apply for adoption</p>
+      </div>
+
+      <form id="adoptionForm" class="form-card">
+
+        <h2 class="form-card-title">Your Information</h2>
+
+        <div class="form-group">
+          <label for="applicant_name">Full Name *</label>
+          <input id="applicant_name" type="text" name="applicant_name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input id="email" type="email" name="email" placeholder="your.email@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number *</label>
+          <input id="phone" type="tel" name="phone" placeholder="+65 1234 5678" required>
+        </div>
+
+        <div class="form-group">
+          <label for="application_statement">Why do you want to adopt this animal? *</label>
+          <textarea id="application_statement" name="application_statement" placeholder="Tell us why you'd be a great match for this animal. Include information about your living situation, experience with pets, and what you can offer." required></textarea>
+        </div>
+
+        <input type="hidden" id="animal_id" name="animal_id" value="">
+
+        <button type="submit" class="btn btn-submit-animal">Submit Application</button>
+
+      </form>
+    </main>
+  </div>
+
+  <script src="/javascript/shared.js"></script>
+  <script src="/javascript/adoptionForm.js"></script>
+</body>
+</html>

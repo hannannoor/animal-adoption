@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Manage Applications</title>
+  <link rel="stylesheet" href="/css/animal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ADMIN HEADER -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="site">
+          <div class="icon">❤</div>
+          <div>
+            <div class="site-title">
+              Animal Adoption
+              <span class="admin-pill">ADMIN</span>
+            </div>
+            <div class="site-subtitle">Manage Applications</div>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a class="btn btn-public" href="animal.html"><i class="fa-solid fa-globe"></i>Public Website</a>
+          <a class="btn btn-manage-apps" href="admin.html">← Back to Animals</a>
+          <a class="btn btn-post" href="addAnimal.html?isadmin=true"><i class="fa fa-plus-circle" aria-hidden="true"></i>Post an Animal</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="admin-title-block">
+        <h1>Adoption Applications</h1>
+        <p>Review and manage adoption applications</p>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="filter-section">
+        <div class="filter-group">
+          <label>Status:</label>
+          <select id="statusFilter" class="filter-select">
+            <option value="all">All Applications</option>
+            <option value="pending" selected>Pending</option>
+            <option value="approved">Approved</option>
+            <option value="reserved">Reserved</option>
+            <option value="rejected">Rejected</option>
+          </select>
+        </div>
+      </div>
+
+      <section id="applicationsGrid" class="applications-grid"></section>
+    </main>
+
+  </div>
+
+  <script src="/javascript/shared.js"></script>
+  <script src="/javascript/manageApplications.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/animal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- ADMIN HEADER (different from normal) -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="site">
+          <div class="icon">❤</div>
+          <div>
+            <div class="site-title">
+              Animal Adoption
+              <span class="admin-pill">ADMIN</span>
+            </div>
+            <div class="site-subtitle">Admin Dashboard</div>
+          </div>
+        </div>
+
+          <nav class="header-actions">
+              <a class="btn btn-public" href="animal.html"><i class="fa-solid fa-globe"></i>Public Website</a>
+              <a class="btn btn-manage-apps" href="manageApplications.html">
+                  <i class="fa-regular fa-clipboard"></i>Manage Applications <span id="pendingCount" class="pending-badge"></span></a>
+              <a class="btn btn-post" href="addAnimal.html?isadmin=true"><i class="fa fa-plus-circle" aria-hidden="true"></i>Post an Animal</a>
+              </nav> 
+            
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="admin-title-block">
+        <h1>Manage Animals</h1>
+        <p>Edit or remove animals from the adoption list</p>
+      </div>
+
+      <section id="adminAnimalsGrid" class="grid admin-grid"></section>
+    </main>
+
+  </div>
+
+  <script src="/javascript/shared.js"></script>
+  <script src="/javascript/admin.js"></script>
+</body>
+</html>

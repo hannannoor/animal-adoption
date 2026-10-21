@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>View Animal</title>
+  <link rel="stylesheet" href="/css/animal.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="details-body">
+  <div class="page">
+
+    <!-- SAME HEADER AS HOME PAGE -->
+    <header class="header">
+      <div class="header-inner">
+        <div class="site">
+          <div class="icon">❤</div>
+          <div>
+            <div class="site-title">Animal Adoption</div>
+            <div class="site-subtitle">Find your new companion</div>
+          </div>
+        </div>
+
+            <nav class="header-actions">
+              <a class="btn btn-portal" href="admin.html"><i class="fa fa-cog"></i>Admin Portal</a>
+              <a class="btn btn-post" href="addAnimal.html"><i class="fa fa-plus-circle" aria-hidden="true"></i>Post an Animal</a>
+            </nav>
+        
+      </div>
+    </header>
+    
+    <main class="container">
+
+      <div class="details-title-block">
+        <a class="back-link" href="animal.html">← Back to Home</a>
+        <h1>View Animal</h1>
+        <p>Meet this animal and browse all photos</p>
+      </div>
+    
+
+      
+      <section class="details-grid">
+
+        <article class="details-card">
+          <div class="gallery-main" id="mainImageBox"></div>
+          <div class="gallery-thumbs" id="thumbnailRow"></div>
+        </article>
+
+        <article class="details-card">
+          <div id="dynamicAnimalDetail"></div>
+          <div id="adoptButtonContainer"></div>
+        </article>
+
+      </section>
+
+    </main>
+  </div>
+
+  <script src="/javascript/shared.js"></script>
+  <script src="/javascript/animalDetail.js"></script>
+</body>
+</html>
